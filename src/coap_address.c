@@ -283,6 +283,8 @@ coap_address_set_unix_domain(coap_address_t *addr,
 }
 
 #if !defined(WITH_CONTIKI)
+
+#if 0 // 2024-02-07: NOT USED IN SWPE
 static void
 update_port(coap_address_t *addr, uint16_t port, uint16_t default_port,
             int update_port0) {
@@ -293,6 +295,7 @@ update_port(coap_address_t *addr, uint16_t port, uint16_t default_port,
   coap_address_set_port(addr, port);
   return;
 }
+#endif // #if 0
 
 #ifdef HAVE_NETDB_H
 #include <netdb.h>
@@ -370,6 +373,7 @@ coap_get_available_scheme_hint_bits(int have_pki_psk, int ws_check,
   return scheme_hint_bits;
 }
 
+#if 0 // 2024-02-07: NOT USED IN SWPE
 coap_addr_info_t *
 coap_resolve_address_info(const coap_str_const_t *address,
                           uint16_t port,
@@ -781,6 +785,8 @@ coap_resolve_address_info(const coap_str_const_t *address,
   return NULL;
 #endif /* RIOT_VERSION */
 }
+#endif // #if 0
+
 #endif /* !WITH_CONTIKI */
 
 void

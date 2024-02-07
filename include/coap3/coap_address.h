@@ -184,6 +184,7 @@ typedef enum coap_resolve_type_t {
  *
  * @return One or more linked sets of coap_addr_info_t or @c NULL if error.
  */
+#if 0 // 2024-02-07: NOT USED IN SWPE
 coap_addr_info_t *coap_resolve_address_info(const coap_str_const_t *address,
                                             uint16_t port,
                                             uint16_t secure_port,
@@ -192,6 +193,7 @@ coap_addr_info_t *coap_resolve_address_info(const coap_str_const_t *address,
                                             int ai_hints_flags,
                                             int scheme_hint_bits,
                                             coap_resolve_type_t type);
+#endif // #if 0
 
 /**
  * Free off the one or more linked sets of coap_addr_info_t returned from
