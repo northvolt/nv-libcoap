@@ -99,7 +99,7 @@ coap_pdu_init(coap_pdu_type_t type, coap_pdu_code_t code, coap_mid_t mid,
   coap_pdu_t *pdu;
 
   assert(type <= 0x3);
-  assert(code <= 0xff);
+  assert((uint32_t) code <= 0xff);
   assert(mid >= 0 && mid <= 0xffff);
 
 #ifdef WITH_LWIP
@@ -1497,7 +1497,7 @@ coap_pdu_get_code(const coap_pdu_t *pdu) {
 
 void
 coap_pdu_set_code(coap_pdu_t *pdu, coap_pdu_code_t code) {
-  assert(code <= 0xff);
+  assert((uint32_t) code <= 0xff);
   pdu->code = code;
 }
 

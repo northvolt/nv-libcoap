@@ -55,6 +55,7 @@ coap_prng_impl(unsigned char *buf, size_t len) {
 
 #endif /* _WIN32 */
 
+#if 0 // 2024-02-07: NOT USED IN SWPE
 /*
  * This, or any user provided alternative, function is expected to
  * return 0 on failure and 1 on success.
@@ -144,5 +145,7 @@ coap_prng(void *buf, size_t len) {
 
   return rand_func(buf, len);
 }
+
+#endif // #if 0
 
 #endif

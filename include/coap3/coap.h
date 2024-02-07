@@ -57,7 +57,7 @@ extern "C" {
 #include "coap3/coap_option.h"
 // #include "coap3/coap_oscore.h"
 #include "coap3/coap_pdu.h"
-// #include "coap3/coap_prng.h"
+#include "coap3/coap_prng.h"
 #include "coap3/coap_resource.h"
 #include "coap3/coap_str.h"
 #include "coap3/coap_subscribe.h"

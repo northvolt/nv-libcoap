@@ -40,6 +40,8 @@ coap_lwip_dump_memory_pools(coap_log_t log_level) {
              memp_pools[i]->stats->used, memp_pools[i]->stats->max,
              memp_pools[i]->stats->err);
   }
+#else /* MEMP_STATS && LWIP_STATS_DISPLAY */
+    (void) log_level;
 #endif /* MEMP_STATS && LWIP_STATS_DISPLAY */
 }
 

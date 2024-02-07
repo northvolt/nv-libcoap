@@ -15,7 +15,7 @@
 #include <lwip/opt.h>
 #include <lwip/debug.h>
 #include <lwip/def.h> /* provide ntohs, htons */
-#include <lwip/netdb.h>
+// #include <lwip/netdb.h>
 
 #define WITH_LWIP 1
 
