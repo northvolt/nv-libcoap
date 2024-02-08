@@ -19,6 +19,19 @@
 #include <lwip/timeouts.h>
 #include <lwip/tcpip.h>
 
+/*
+2024-02-07: Not used in SWPE
+*/
+#ifdef LOCK_TCPIP_CORE
+#undef LOCK_TCPIP_CORE
+#define LOCK_TCPIP_CORE()
+#endif
+
+#ifdef UNLOCK_TCPIP_CORE
+#undef UNLOCK_TCPIP_CORE
+#define UNLOCK_TCPIP_CORE()
+#endif
+
 void
 coap_lwip_dump_memory_pools(coap_log_t log_level) {
 #if MEMP_STATS && LWIP_STATS_DISPLAY

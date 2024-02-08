@@ -114,6 +114,19 @@ coap_free_node(coap_queue_t *node) {
 
 #include <lwip/memp.h>
 
+/*
+2024-02-07: Not used in SWPE
+*/
+#ifdef LOCK_TCPIP_CORE
+#undef LOCK_TCPIP_CORE
+#define LOCK_TCPIP_CORE()
+#endif
+
+#ifdef UNLOCK_TCPIP_CORE
+#undef UNLOCK_TCPIP_CORE
+#define UNLOCK_TCPIP_CORE()
+#endif
+
 COAP_STATIC_INLINE coap_queue_t *
 coap_malloc_node() {
   return (coap_queue_t *)memp_malloc(MEMP_COAP_NODE);
