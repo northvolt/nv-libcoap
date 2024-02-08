@@ -50,18 +50,18 @@ extern "C" {
 #include "coap3/coap_debug.h"
 #include "coap3/coap_dtls.h"
 #include "coap3/coap_encode.h"
-// #include "coap3/coap_event.h"
+// #include "coap3/coap_event.h" // 2024-02-07: NOT USED IN SWPE
 #include "coap3/coap_io.h"
 #include "coap3/coap_mem.h"
 #include "coap3/coap_net.h"
 #include "coap3/coap_option.h"
-// #include "coap3/coap_oscore.h"
+// #include "coap3/coap_oscore.h" // 2024-02-07: NOT USED IN SWPE
 #include "coap3/coap_pdu.h"
 #include "coap3/coap_prng.h"
 #include "coap3/coap_resource.h"
 #include "coap3/coap_str.h"
 #include "coap3/coap_subscribe.h"
-#include "coap3/coap_time.h"
+// #include "coap3/coap_time.h" // 2024-02-07: NOT USED IN SWPE
 #include "coap3/coap_uri.h"
 #include "coap3/coap_ws.h"
 
